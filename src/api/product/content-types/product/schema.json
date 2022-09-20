@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Colour": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Adire",
+        "Amazing",
+        "Avogan",
+        "Bountiful",
+        "Chigan Fashion",
+        "Chiganvy",
+        "Chiganwo Wax",
+        "Cihiganvy",
+        "Grand Super Wax",
+        "Hi Target",
+        "Hollandis",
+        "Hollantex",
+        "Rhema",
+        "Rose Pearl",
+        "Silk & Chiffon",
+        "Super Popular",
+        "Superhero",
+        "Superwax",
+        "Zahra"
+      ]
+    },
+    "Quantity": {
+      "type": "integer"
+    }
+  }
+}
