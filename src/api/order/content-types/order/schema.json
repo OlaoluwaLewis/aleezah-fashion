@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "orders"
+    },
+    "ShipStreetAndNumber": {
+      "type": "string",
+      "required": true
+    },
+    "ShipCity": {
+      "type": "string",
+      "required": true
+    },
+    "ShipZipCode": {
+      "type": "integer",
+      "required": true
+    },
+    "ShipState": {
+      "type": "string",
+      "required": false
+    },
+    "ShipCountry": {
+      "type": "string",
+      "required": true
+    },
+    "ShippingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Order received",
+        "Processing",
+        "Shipped"
+      ],
+      "required": true,
+      "default": "Order received"
+    },
+    "IsPaidFor": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "TotalPrice": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "order_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-item.order-item"
+    }
+  }
+}
