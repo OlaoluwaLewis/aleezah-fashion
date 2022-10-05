@@ -51,12 +51,6 @@
       "type": "integer",
       "required": true,
       "min": 0
-    },
-    "orders": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::order.order",
-      "mappedBy": "customer"
     }
   }
 }
